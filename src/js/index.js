@@ -1,4 +1,9 @@
 $(function(){
+	//顶部的banner
+	$('#banner-cleanbtn').click(function(){
+		$(this).animate({top : '-26px'},500);
+		$(this).parent().slideUp(500);
+	})
   var mySwiper = new Swiper ('.swiper-container', {
     loop: true, // 循环模式选项
     effect : 'fade',

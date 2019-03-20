@@ -8,6 +8,10 @@ var fileinclude = require('gulp-file-include');
 var rev = require('gulp-rev');
 var revCollector = require('gulp-rev-collector');
 var cleanDest = require('gulp-clean-dest');
+var del = require('del');
+gulp.task('clean',function(cb){
+     return (del('./dist/css/*.css',cb));
+});
 gulp.task('fileinclude',function(){
     gulp.src('./src/html/index.html')
         .pipe(fileinclude({
@@ -26,8 +30,7 @@ gulp.task('concat', function() {                                //- 创建一个
     gulp.src('./src/css/*.css')    								//- 需要处理的css文件，放到一个字符串数组里
         .pipe(concat('index.min.css'))                               //- 合并后的文件名
         .pipe(minifyCss())                                      //- 压缩处理成一行
-        .pipe(rev())
-        .pipe(cleanDest('./dist/css'))                                            //- 文件名加MD5后缀
+        .pipe(rev())                                              //- 文件名加MD5后缀
         .pipe(gulp.dest('./dist/css'))                               //- 输出文件本地
         .pipe(rev.manifest())                                   //- 生成一个rev-manifest.json
         .pipe(gulp.dest('./rev'));                              //- 将 rev-manifest.json 保存到 rev 目录内
@@ -38,8 +41,9 @@ gulp.task('rev',function(){
 	.pipe(gulp.dest('./dist/html/'))
 })
 gulp.task('default',function(){
+    gulp.watch(['./dist/css/*.css','cb'],['clean'])
 	gulp.watch(['./src/sass/*.scss'],['sass'])
-    gulp.watch(['src/html/**/*.html'],['fileinclude']);
-    gulp.watch(['./src/css/*.css'],['concat']);
-    gulp.watch(['./rev/*.json','./src/newhtml/index.html'],['rev']);
+    gulp.watch(['src/html/**/*.html'],['fileinclude'])
+    gulp.watch(['./src/css/*.css'],['concat'])
+    gulp.watch(['./rev/*.json','./src/newhtml/index.html'],['rev'])
 })
