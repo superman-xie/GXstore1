@@ -16,7 +16,7 @@
 			padding-left: 28px;
 			float: left;
 		}
-		p{
+		>p{
 			float: left;
 			margin-left:45px;
 			color:#555555;
@@ -49,47 +49,251 @@
 			float: right;
 			margin-right: 7px;
 			li{
+				position: relative;
 				float: left;
+				height:40px;
 				background: url(../img/index_sprites.png) no-repeat -13px -2439px;
-				padding-left:10px;
-				a{
-					padding-right:20px;
+				z-index: 1;
+
+				&>a{
 					box-sizing:border-box;
 					color:#555555;
-					height: 40px;
+					height: 14px;
 					display: block;
-					
+					text-indent: 10px;
 				}
+				span{
+					display: block;
+					width: 13px;
+					height: 7px;
+					position: absolute;
+					right: 6px;
+					top:17px;
+					background: url(../img/index_sprites.png) no-repeat -9px -206px;
+				}
+
 			}
 			li:nth-child(1){
-				a{
-					background: url(../img/index_sprites.png) no-repeat 38px -188px;
+				width:78px;
+				.top-ul-user{
+					border:1px solid #646464;
+					background: #fefefe;
+					position: absolute;
+					top:38px;
+					border-top:0;
+					padding: 5px 0;
+					width: 100%;
+					text-indent: 10px;
+					left:-1px;
+					display: none;
+					& a{
+						display: block;
+						line-height: 22px;
+						color:#555;
+						&:hover{
+							color:#c8000a;
+						}
+					}
 				}
+				&:hover{
+					cursor: pointer;
+					height: 38px;
+					background: #fefefe;
+					width: 78px;
+					border:1px solid #646464;
+					border-bottom:0;
+					color:#c8000a;
+					z-index: 2;
+					left:1px;
+
+				}
+				&:hover span{
+					background: url(../img/index_sprites.png) no-repeat -55px -208px;
+				}
+				&:hover >a{
+					color:#c8000a;
+				}
+				&:hover .top-ul-user{
+					display: block;
+				}
+
 			}
 			li:nth-child(2){
-				padding-left:15px;
-				a{
-					background: url(../img/index_sprites.png) no-repeat 27px -188px;
+				width: 72px;
+				.top-ul-user{
+					border:1px solid #646464;
+					background: #fefefe;
+					position: absolute;
+					top:38px;
+					border-top:0;
+					padding: 5px 0;
+					width: 100%;
+					text-indent: 5px;
+					left:-1px;
+					display: none;
+					& a{
+						display: block;
+						line-height: 22px;
+						color:#555;
+						&:hover{
+							color:#c8000a;
+						}
+					}
+				}
+				&:hover{
+					cursor: pointer;
+					height: 38px;
+					background: #fefefe;
+					border:1px solid #646464;
+					border-bottom:0;
+					color:#c8000a;
+					z-index: 2;
+					left:1px;
+
+				}
+				&:hover span{
+					background: url(../img/index_sprites.png) no-repeat -55px -208px;
+				}
+				&:hover >a{
+					color:#c8000a;
+				}
+				&:hover .top-ul-user{
+					display: block;
 				}
 			}
 			li:nth-child(3){
-				padding-left:15px;
-				a{
-					background: url(../img/index_sprites.png) no-repeat 38px -188px;
+				width: 78px;
+				.top-ul-user{
+					border:1px solid #646464;
+					background: #fefefe;
+					position: absolute;
+					top:38px;
+					border-top:0;
+					padding: 5px 0;
+					width: 100%;
+					text-indent: 10px;
+					left:-1px;
+					display: none;
+					& a{
+						display: block;
+						line-height: 22px;
+						color:#555;
+						&:hover{
+							color:#c8000a;
+						}
+					}
+				}
+				&:hover{
+					cursor: pointer;
+					height: 38px;
+					background: #fefefe;
+					border:1px solid #646464;
+					border-bottom:0;
+					color:#c8000a;
+					z-index: 2;
+					left:1px;
+
+				}
+				&:hover span{
+					background: url(../img/index_sprites.png) no-repeat -55px -208px;
+				}
+				&:hover >a{
+					color:#c8000a;
+				}
+				&:hover .top-ul-user{
+					display: block;
 				}
 			}
 			li:nth-child(4){
-				padding-left:0;
-				a{
-					padding-left:21px;
-					padding-right:9px;
-					background: url(../img/index_sprites.png) no-repeat -2px -88px;
+				width: 79px;
+				padding-left: 10px;
+				.top-ul-phone{
+					background: url(../img/index_sprites.png) no-repeat -3px -100px;
+					position: absolute;
+					width: 18px;
+					height:20px;
+					top:12px;
+					left:0px;
+				}
+				.top-ul-user{
+					border:1px solid #646464;
+					background: #fefefe;
+					position: absolute;
+					top:37px;
+					padding: 5px 0;
+					width: 230px;
+					height: 132px;
+					left:-74px;
+					z-index: 1;
+					display:none;
+					justify-content:space-around;
+					text-align:center;
+					a{
+						color:#888;
+					}
+				}
+				&:hover{
+					cursor: pointer;
+					height:38px;
+					background: #fefefe;
+					border:1px solid #646464;
+					border-bottom:0;
+					color:#c8000a;
+					z-index: 5;
+					left:1px;
+
+				}
+				&:hover span{
+					background: url(../img/index_sprites.png) no-repeat -55px -208px;
+				}
+				&:hover >a{
+					color:#c8000a;
+				}
+				&:hover .top-ul-user{
+					display: flex;
 				}
 			}
 			li:nth-child(5){
-				padding-left:15px;
-				a{
-					background: url(../img/index_sprites.png) no-repeat 38px -188px;
+				width: 78px;
+				.top-ul-user{
+					border:1px solid #646464;
+					background: #fefefe;
+					position: absolute;
+					top:38px;
+					border-top:0;
+					padding: 5px 0;
+					width: 100%;
+					text-indent: 15px;
+					left:-1px;
+					display: none;
+					& a{
+						display: block;
+						line-height: 22px;
+						color:#555;
+						&:hover{
+							color:#c8000a;
+						}
+					}
+				}
+				&:hover{
+					cursor: pointer;
+					height: 38px;
+					background: #fefefe;
+					border:1px solid #646464;
+					border-bottom:0;
+					color:#c8000a;
+					z-index: 2;
+					left:1px;
+
+				}
+				&:hover span{
+					background: url(../img/index_sprites.png) no-repeat -55px -208px;
+				}
+				&:hover >a{
+					color:#c8000a;
+				}
+				&:hover .top-ul-user{
+					display: block;
 				}
 			}
 		}

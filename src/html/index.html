@@ -5,9 +5,60 @@
 	<title>Document</title>
 	<link rel="stylesheet" type="text/css" href="../css/footer.css">
 	<link rel="stylesheet" type="text/css" href="../css/header.css">
+	<link rel="stylesheet" type="text/css" href="../css/index.css">
+	<link rel="stylesheet" type="text/css" href="../css/swiper.min.css">
+	<script type="text/javascript" src="../js/jquery-1.11.3.js"></script>
+	<script type="text/javascript" src="../js/index.js"></script>
 </head>
 <body>
 	@@include('./header.html')
-	@@include('./_footer.html')
+	<div class="warp-article">
+		<div class="article-nav">
+		
+		</div>
+		<article>
+			<div class="article-top-slideshow">
+				<div class="swiper-container">
+				    <div class="swiper-wrapper">
+				        <div class="swiper-slide"><a href=""><img src="../img/banner1.jpg"></a></div>
+				        <div class="swiper-slide"><a href=""><img src="../img/banner2.jpg"></a></div>
+				        <div class="swiper-slide"><a href=""><img src="../img/banner3.jpg"></a></div>
+				        <div class="swiper-slide"><a href=""><img src="../img/banner4.jpg"></a></div>
+				        <div class="swiper-slide"><a href=""><img src="../img/banner5.jpg"></a></div>
+				        <div class="swiper-slide"><a href=""><img src="../img/banner6.jpg"></a></div>
+				    </div>
+				    <!-- 如果需要分页器 -->
+				    <div class="swiper-pagination"></div>
+				    <!-- 如果需要导航按钮 -->
+				    <div class="swiper-button-prev " id="swiper-btn"></div>
+				    <div class="swiper-button-next" id="swiper-btn"></div>
+				</div>				
+			</div>
+			<ul class="article-top-information">
+				<li>
+					<img src="../img/top1.jpg">
+				</li>
+				<li>
+					<h3>— 盖象快讯 —</h3>
+				</li>
+				<li>
+					<img src="../img/top2.png">
+				</li>
+				<li>
+					<ul class="information-small-ul">
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</li>
+			</ul>
+
+		</article>
+	</div>
+	@@include('./footer.html')
+	<script src="../js/swiper.min.js"></script>
 </body>
 </html>

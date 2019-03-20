@@ -29,7 +29,8 @@ html, body {
   height: 100%; }
 
 .wrap_footer {
-  width: 100%; }
+  width: 100%;
+  overflow: hidden; }
   .wrap_footer .cut-off-rule {
     height: 2px;
     width: 100%;

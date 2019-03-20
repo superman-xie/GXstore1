@@ -5,6 +5,10 @@
 	<title>Document</title>
 	<link rel="stylesheet" type="text/css" href="../css/footer.css">
 	<link rel="stylesheet" type="text/css" href="../css/header.css">
+	<link rel="stylesheet" type="text/css" href="../css/index.css">
+	<link rel="stylesheet" type="text/css" href="../css/swiper.min.css">
+	<script type="text/javascript" src="../js/jquery-1.11.3.js"></script>
+	<script type="text/javascript" src="../js/index.js"></script>
 </head>
 <body>
 	<div class="wrap-header">
@@ -13,12 +17,49 @@
 		<p>想你了，欢迎来到盖象！</p>
 		<a href="">请登录</a><a href="">注册</a>
 		<div class="small-top-shop">购物车<span>0</span></div>
-		<ul class="small-top-ul">
-			<li><a href="">我的盖象</a></li>
-			<li><a href="">收藏夹</a></li>
-			<li><a href="">商家支持</a></li>
-			<li><a href="">手机APP</a></li>
-			<li><a href="">简体中文</a></li>
+		<ul class="small-top-ul" id="top-ul">
+			<li>
+				<a href="">我的盖象</a>
+				<span class="top-ul-line"></span>
+				<div class="top-ul-user">
+					<a href="">我的订单</a>
+					<a href="">我的钱包</a>
+				</div>
+			</li>
+			<li>
+				<a href="">收藏夹</a>
+				<span class=""></span>
+				<div class="top-ul-user">
+					<a href="">收藏的商品</a>
+					<a href="">收藏的商铺</a>
+				</div>
+			</li>
+			<li>
+				<a href="">商家支持</a>
+				<span class=""></span>
+				<div class="top-ul-user">
+					<a href="">商家入驻</a>
+					<a href="">合作联盟</a>
+					<a href="">盖网终端机</a>
+				</div>
+			</li>
+			<li>
+				<a href="">手机APP</a>
+				<span class=""></span>
+				<i class="top-ul-phone"></i>
+				<div class="top-ul-user">
+					<a href=""><img src="../img/ewm.jpg"><p>盖象优选APP</p></a>
+					<a href=""><img src="../img/gzh.jpg"><p>微信公众号</p></a>
+				</div>
+			</li>
+			<li>
+				<a href="">简体中文</a>
+				<span class=""></span>
+				<div class="top-ul-user">
+					<a href="">简体中文</a>
+					<a href="">繁体中文</a>
+				</div>
+			</li>
 		</ul>
 	</div>
 </div>
@@ -30,6 +71,52 @@
 			<button class="header-sub-btn"></button>
 		</div>
 </header>
+	<div class="warp-article">
+		<div class="article-nav">
+		
+		</div>
+		<article>
+			<div class="article-top-slideshow">
+				<div class="swiper-container">
+				    <div class="swiper-wrapper">
+				        <div class="swiper-slide"><a href=""><img src="../img/banner1.jpg"></a></div>
+				        <div class="swiper-slide"><a href=""><img src="../img/banner2.jpg"></a></div>
+				        <div class="swiper-slide"><a href=""><img src="../img/banner3.jpg"></a></div>
+				        <div class="swiper-slide"><a href=""><img src="../img/banner4.jpg"></a></div>
+				        <div class="swiper-slide"><a href=""><img src="../img/banner5.jpg"></a></div>
+				        <div class="swiper-slide"><a href=""><img src="../img/banner6.jpg"></a></div>
+				    </div>
+				    <!-- 如果需要分页器 -->
+				    <div class="swiper-pagination"></div>
+				    <!-- 如果需要导航按钮 -->
+				    <div class="swiper-button-prev " id="swiper-btn"></div>
+				    <div class="swiper-button-next" id="swiper-btn"></div>
+				</div>				
+			</div>
+			<ul class="article-top-information">
+				<li>
+					<img src="../img/top1.jpg">
+				</li>
+				<li>
+					<h3>— 盖象快讯 —</h3>
+				</li>
+				<li>
+					<img src="../img/top2.png">
+				</li>
+				<li>
+					<ul class="information-small-ul">
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</li>
+			</ul>
+
+		</article>
+	</div>
 	<div class="wrap_footer">
 	<div class="cut-off-rule"></div>
 	<footer>
@@ -96,5 +183,6 @@
 		<div class="webmaster-statistical"><a href="">站长统计</a></div>
 	</div>
 </div>
+	<script src="../js/swiper.min.js"></script>
 </body>
 </html>
