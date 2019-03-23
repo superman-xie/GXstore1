@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>用户登陆</title>
+	<link rel="shortcut icon" href="../img/gx_banner_nav_02.png">
+	<link rel="stylesheet" type="text/css" href="../css/footer.css">
+	<link rel="stylesheet" type="text/css" href="../css/login.css">
+</head>
+<body>
+	<!-- 头部 -->
+	<div class="wrap-header ">
+		<header class="center">
+			<h1><a href="index.html"></a></h1>
+			<h3>用户登录</h3>
+		</header>
+	</div>
+	<!-- 登录主体 -->
+		<div class="login-center-bg">
+			<div class="login-cetent-layout">
+				<div class="login-form-warp">
+					<div class="login-form-top">
+						<h3>登录盖象商城</h3>
+						<a href="register.html">立即注册 &gt;</a>
+					</div>
+					<div class="login-userpassword-erro" id="login-erro">
+						账户名与密码不匹配，你已经失败<span></span>次
+					</div>
+					<div class="from-centent-input">
+						<div class="from-centent-user form-centent-all">
+							<label class="login-user-p"></label><input type="text" name="" id="login-user" placeholder="会员编号/用户名/手机号">		
+						</div>
+						<div class="from-centent-password form-centent-all">
+							<label class="login-passward-p"></label><input type="text" name="" id="login-password" placeholder="密码">						
+						</div>
+						<div class="from-centent-yzminput">
+							<input type="text" name="" id="from-yzm" placeholder="请输入验证码"><div class="from-login-yzm" id="from-yzm-btn"></div>
+						</div>
+						<div class="from-centent-checkbox">
+							<div><input type="checkbox" name="" id="from-checkbox"><label>自动登录</label></div>
+							<a href="">忘记密码</a>
+						</div>
+						<button id="from-centent-loginbtn">自动登录</button>
+					</div>
+				</div>				
+			</div>
+		</div>	
+	@@include('./footer.html')
+	<script type="text/javascript" src="../js/jquery-1.11.3.js"></script>
+	<script type="text/javascript" src="../js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="../js/login.js"></script>
+	<script type="text/javascript" src="../js/tools.js"></script>
+</body>
+</html>

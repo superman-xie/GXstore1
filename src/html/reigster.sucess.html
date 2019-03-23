@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>注册成功</title>
+	<link rel="stylesheet" type="text/css" href="../css/header.css">
+	<link rel="stylesheet" type="text/css" href="../css/footer.css">
+	<style type="text/css">
+		.gx-reigster-sucessbg{
+			width:100%;
+			height:600px;
+			background:url(../img/gx-register-success.jpg);
+			margin-bottom: 130px;
+			overflow: hidden;
+		}
+		.sucess-win-xx{
+			width:780px;
+			height:250px;
+			margin: 175px auto 0;
+			background:#fff;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+		.sucess-h3{
+			height: 40px;
+		}
+		.sucess-h3 span{
+			display: block;
+			width:40px;
+			height:40px;
+			background:url(../img/index_sprites.png) no-repeat -9px -1738px;
+			float: left;
+		}
+		.sucess-h3 h3{
+			line-height: 40px;
+			display: inline-block;
+			font-size: 18px;
+			font-weight: bold;
+			margin-left: 9px;
+		}
+		.sucess-p{
+			height: 54px;
+			line-height: 54px;
+		}
+		.sucess-p i{
+			color :#c8000a;
+		}
+		.sucess-btn{
+			margin-top:54px;
+			height:30px;
+			width: 150px;
+			background:#c8000a;
+			border:0;
+			color:#fff;
+			border-radius:6px;
+		}
+	</style>
+	<script type="text/javascript" src="../js/jquery-1.11.3.js"></script>
+	<script type="text/javascript" src="../js/jquery.cookie.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			var name = GetQueryString('name');
+			if(name !== null){
+			$('#header-user-p').html('Hi ，').append('<i>' + name + '</i>');
+			$('#user-id').html(name);
+			$('#header-user-p').next().html('消息 0');
+			$('#header-user-p').next().next().html('退出');
+			$('.sucess-btn').click(function(){
+				location.href = 'index.html?name=' + name;		
+			})			
+		}
+		})
+		//获取get
+		function GetQueryString(name)
+		{
+		     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+		     var r = window.location.search.substr(1).match(reg);
+		     if(r!=null)return  unescape(r[2]); return null;
+		}
+	</script>
+</head>
+<body>
+	@@include('./header.html')
+	<div class="gx-reigster-sucessbg">
+		<div class="sucess-win-xx">
+			<div class="sucess-h3">
+				<span></span>
+				<h3>注册成功！</h3>
+			</div>
+			<div class="sucess-p">
+				<p>您的盖网账号为<i id="user-id"></i> ,现在您可登录盖象商城，享受优质的购物体验</p>
+			</div>
+			<button class="sucess-btn">登录商城</button>
+		</div>
+	</div>
+	@@include('./footer.html')
+</body>
+</html>

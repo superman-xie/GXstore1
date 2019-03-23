@@ -1,4 +1,13 @@
 $(function(){
+  //去除登录信息：失败
+  $('#header-user-p').next().next().click(function(){
+         var currentUrl = window.location.href;
+        var targetUrl = currentUrl.replace(/name=/, "");
+        //调用函数，获取get url  值 ,获取用户名
+        alert(targetUrl);
+        window.location.href = '../pages/index.html';   
+  })
+  headerUser();
 	//顶部的banner
 	$('#banner-cleanbtn').click(function(){
 		$(this).animate({top : '-26px'},500);
@@ -39,4 +48,5 @@ $(function(){
   	mySwiper.autoplay.start();
   }
   $('.swiper_btn').children().css({color : '#323232'});
+  //
 })

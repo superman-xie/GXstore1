@@ -13,7 +13,7 @@ gulp.task('clean',function(cb){
      return (del('./dist/css/*.css',cb));
 });
 gulp.task('fileinclude',function(){
-    gulp.src('./src/html/index.html')
+    gulp.src('./src/html/*.html')
         .pipe(fileinclude({
             prefix: '@@',
             basepath: '@file'

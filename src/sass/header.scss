@@ -8,6 +8,9 @@
 		margin: 0 auto;
 		width:1200px;
 		line-height: 40px;
+		.header-user-p>i{
+			color:#c8000a;
+		}
 		.small-top-home{
 			color:#666;
 			font-size: 12px;
@@ -20,7 +23,6 @@
 			float: left;
 			margin-left:45px;
 			color:#555555;
-
 		}
 		&>a{
 			margin-left:32px;
@@ -28,9 +30,10 @@
 		}
 		.small-top-shop{
 			display: inline-block;
-			margin-left: 288px;
+			float:right;
 			background: url(../img/index_sprites.png) no-repeat -3px -38px;
 			padding-left: 28px;
+			margin-right: 14px;
 			cursor:pointer;
 			span{
 				display: block;
@@ -51,16 +54,17 @@
 			li{
 				position: relative;
 				float: left;
-				height:40px;
 				background: url(../img/index_sprites.png) no-repeat -13px -2439px;
 				z-index: 1;
+				height: 38px;
+				border-top: 1px solid #e6e6e6;
 
 				&>a{
 					box-sizing:border-box;
 					color:#555555;
-					height: 14px;
 					display: block;
-					text-indent: 10px;
+					height: 38px;
+					padding-left: 10px;
 				}
 				span{
 					display: block;
@@ -75,6 +79,8 @@
 			}
 			li:nth-child(1){
 				width:78px;
+				left:3px;
+
 				.top-ul-user{
 					border:1px solid #646464;
 					background: #fefefe;
@@ -97,21 +103,20 @@
 				}
 				&:hover{
 					cursor: pointer;
-					height: 38px;
 					background: #fefefe;
-					width: 78px;
 					border:1px solid #646464;
 					border-bottom:0;
+					width: 76px;
 					color:#c8000a;
 					z-index: 2;
-					left:1px;
-
+					left:3px;
 				}
 				&:hover span{
 					background: url(../img/index_sprites.png) no-repeat -55px -208px;
 				}
 				&:hover >a{
 					color:#c8000a;
+					padding-left: 9px;
 				}
 				&:hover .top-ul-user{
 					display: block;
@@ -120,6 +125,7 @@
 			}
 			li:nth-child(2){
 				width: 72px;
+				left: 2px;
 				.top-ul-user{
 					border:1px solid #646464;
 					background: #fefefe;
@@ -148,7 +154,11 @@
 					border-bottom:0;
 					color:#c8000a;
 					z-index: 2;
-					left:1px;
+					left:3px;
+					width: 70px;
+					>a{
+						padding-left: 9px;
+					}
 
 				}
 				&:hover span{
@@ -156,6 +166,7 @@
 				}
 				&:hover >a{
 					color:#c8000a;
+					padding-left: 9px;
 				}
 				&:hover .top-ul-user{
 					display: block;
@@ -163,6 +174,7 @@
 			}
 			li:nth-child(3){
 				width: 78px;
+				left:2px;
 				.top-ul-user{
 					border:1px solid #646464;
 					background: #fefefe;
@@ -190,8 +202,9 @@
 					border:1px solid #646464;
 					border-bottom:0;
 					color:#c8000a;
+					width: 76px;
 					z-index: 2;
-					left:1px;
+					left:2px;
 
 				}
 				&:hover span{
@@ -199,6 +212,7 @@
 				}
 				&:hover >a{
 					color:#c8000a;
+					padding-left: 9px;
 				}
 				&:hover .top-ul-user{
 					display: block;
@@ -207,6 +221,7 @@
 			li:nth-child(4){
 				width: 79px;
 				padding-left: 10px;
+				left:1px;
 				.top-ul-phone{
 					background: url(../img/index_sprites.png) no-repeat -3px -100px;
 					position: absolute;
@@ -238,6 +253,7 @@
 					background: #fefefe;
 					border:1px solid #646464;
 					border-bottom:0;
+					width: 77px;
 					color:#c8000a;
 					z-index: 5;
 					left:1px;
@@ -248,6 +264,7 @@
 				}
 				&:hover >a{
 					color:#c8000a;
+					padding-left: 9px;
 				}
 				&:hover .top-ul-user{
 					display: flex;
@@ -255,6 +272,7 @@
 			}
 			li:nth-child(5){
 				width: 78px;
+				right: 1px;
 				.top-ul-user{
 					border:1px solid #646464;
 					background: #fefefe;
@@ -272,6 +290,7 @@
 						color:#555;
 						&:hover{
 							color:#c8000a;
+							
 						}
 					}
 				}
@@ -282,8 +301,9 @@
 					border:1px solid #646464;
 					border-bottom:0;
 					color:#c8000a;
+					width: 76px;
 					z-index: 2;
-					left:1px;
+					right: 1px;
 
 				}
 				&:hover span{
@@ -291,6 +311,7 @@
 				}
 				&:hover >a{
 					color:#c8000a;
+					padding-left: 9px;
 				}
 				&:hover .top-ul-user{
 					display: block;

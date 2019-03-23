@@ -1,0 +1,164 @@
+.wrap-header{
+	width:100%;
+	background:#323232;
+	overflow: hidden;
+	height: 80px;
+	header{
+		height:80px;
+		line-height: 80px;
+		h1{
+			float: left;
+			height: 80px;
+			a{
+			width: 220px;
+			height: 80px;
+			display: inline-block;
+			background: url(../img/mailbox-logo.jpg) center center no-repeat;			
+				}
+		}
+		h3{
+			color:#fff;
+			font-size:18px;
+			line-height: 90px;
+			margin-left: 10px;
+			overflow: hidden;
+			float: left;
+		}
+	}
+}
+.login-center-bg{
+	width: 100%;
+	height: 600px;
+	background: url(../img/login_bg.jpg);
+	margin: 150px 0;
+	overflow: hidden;
+	.login-cetent-layout {
+	    width: 1200px;
+	    margin: 0 auto;
+	    position: relative;
+	    height: 600px;
+		.login-form-warp{
+			position: absolute;
+			top: 100px;
+			right: 0;
+			width: 350px;
+			min-height: 400px;
+			background-color: #f5eefb;
+			text-align: center;
+			.login-form-top{
+				height:44px;
+				width: 301px;
+				padding:0 25px 0 24px;
+				line-height: 44px;
+				display: flex;
+				justify-content: space-between;
+				h3{
+					font-size: 18px;
+				}
+				a{
+					color:#c8000a;
+				}
+			}
+			.login-userpassword-erro{
+				width: 250px;
+				height:25px;
+				background:#c8000a;
+				color:#fff;
+				line-height:25px;
+				margin:0 auto;
+				display: none;
+				font-size:12px;
+			}
+			.from-centent-input{
+				width: 304px;
+				min-height:207px;
+				margin-left: 25px;
+				overflow: hidden;
+				text-align: center;
+				.from-centent-user{
+					margin: 12px 0 25px 0;
+					overflow: hidden;
+					.login-user-p{
+							width: 39px;
+							height: 39px;
+							display: block;
+							float: left;
+							border:1px solid #dcdcdc;
+							background: url(../img/gx_login_username.jpg) 0 0 no-repeat;
+						}
+					#login-user{
+						width: 245px;
+						height: 11px;
+						padding: 14px 0 14px 15px;
+						border:1px solid #dcdcdc;
+						float: left;
+					}					
+				}
+				.from-centent-password{
+					margin-bottom: 12px;
+					overflow: hidden;
+					.login-passward-p{
+						width: 39px;
+						height: 39px;
+						border:1px solid #dcdcdc;
+						display: block;
+						float: left;
+						background: url(../img/gx_login_password.jpg) 0 0 no-repeat;						
+					}
+					#login-password{
+						width: 245px;
+						height: 11px;
+						padding: 14px 0 14px 15px;
+						border:1px solid #dcdcdc;
+						float: left;						
+					}
+				}
+				.from-centent-yzminput{
+					margin-bottom: 12px;
+					overflow: hidden;
+					#from-yzm{
+						height:13px;
+						background: #fff;
+						width: 150px;
+						padding:14px 0 13px 10px;
+						border:0;
+						float: left;
+					}
+					#from-yzm-btn{
+						height: 40px;
+						width: 85px;
+						float: left;
+						margin-left: 7px;
+						img{
+							width: 85px;
+							height: 40px;
+						}
+					}
+				}
+				.from-centent-checkbox{
+					display: flex;
+					justify-content: space-between;
+					width: 100%;
+
+					input{
+						vertical-align: middle;
+					}
+					a{
+						color:#c8000a;
+					}
+				}
+				#from-centent-loginbtn{
+					width: 200px;
+					height: 37px;
+					background: #c8000a;
+					border:0;
+					border-radius: 8px;
+					color:#fff;
+					margin-top: 37px;
+				}
+			}
+
+		}
+	}
+
+}

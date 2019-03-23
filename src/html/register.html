@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>用户注册</title>
+	<link rel="stylesheet" type="text/css" href="../css/footer.css">
+	<link rel="stylesheet" type="text/css" href="../css/register.css">
+	<script type="text/javascript" src="../js/jquery-1.11.3.js"></script>
+	<script type="text/javascript" src="../js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="../js/register.js"></script>
+</head>
+<body>
+	<div class="gx-register-bg">
+		<div class="gx-register-top">
+			<div class="gx-register-hg"></div>
+			<a href="index.html" class="gx-register-logo"></a>
+			<div class="register-top-login">已有账号？请 <a href="login.html">登录</a></div>	
+			<div class="gx-register-txt">
+				<ul class="gx-register-bd">
+					<li><span>*</span>手机号码：</li>
+					<li><span>*</span>验证码：</li>
+					<li><span>*</span>请填写手机效验码：</li>
+					<li><span>*</span>设置密码：</li>
+					<li><span></span>推荐人会员号：</li>
+				</ul>
+				<ul class="gx-register-input" id="gx-input">
+					<li><input type="text" name="" placeholder="请输入您的手机号码"><i id="user-i"></i></li>
+					<li><input type="text" name="" placeholder="请输入图形验证码"><div class="gx-register-yzm" id="yzm-btn"></div><i id="PYZM-i"></i></li>
+					<li><input type="text" name="" placeholder="请输入手机验证码"><button class="gx-register-yzmbtn">获取短信验证码</button><i id="DXYZM-i"></i></li>
+					<li><input type="password" name="" placeholder="请输入6到12位登录密码"><i id="password-i"></i></li>
+					<li><input type="text" name="" placeholder="请输入推荐人会员号" ></li>
+					<li><p><input type="checkbox" name="" id="input-checkbox">我已阅读并同意 <a href=""> 《盖象商城用户入驻协议》</a></p><p id="agree-xy">请同意盖象商城用户入驻协议</p></li>
+					<li><input type="submit" name="" value="立即注册">
+						</li>
+				</ul>
+				<div class="gx-register-vip">
+					<div class="gx-vip-p">
+						<h6>欢迎注册盖象会员</h6>
+						<h6>三大专项特权等着您</h6>
+						<div class="vip-p-advantage">
+							<p><span class="p-img-1"></span><i>会员绑定，终身奖励</i></p>
+							<p><span class="p-img-2"></span><i>积分购物，优惠多多</i></p>
+							<p><span class="p-img-3"></span><i>积分通用，返利不断</i></p>
+						</div>
+						<div class="vip-p-phone"><span></span><p>服务电话</p><i>400-620-6899</i></div>
+					</div>
+				</div>
+				<img src="../img/gx_register_mountain.png">
+			</div>		
+		</div>
+	</div>
+	@@include('./footer.html')
+</body>
+</html>

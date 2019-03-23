@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>注册成功</title>
+	<link rel="stylesheet" type="text/css" href="../css/header.css">
+	<link rel="stylesheet" type="text/css" href="../css/footer.css">
+	<style type="text/css">
+		.gx-reigster-sucessbg{
+			width:100%;
+			height:600px;
+			background:url(../img/gx-register-success.jpg);
+			margin-bottom: 130px;
+			overflow: hidden;
+		}
+		.sucess-win-xx{
+			width:780px;
+			height:250px;
+			margin: 175px auto 0;
+			background:#fff;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+		.sucess-h3{
+			height: 40px;
+		}
+		.sucess-h3 span{
+			display: block;
+			width:40px;
+			height:40px;
+			background:url(../img/index_sprites.png) no-repeat -9px -1738px;
+			float: left;
+		}
+		.sucess-h3 h3{
+			line-height: 40px;
+			display: inline-block;
+			font-size: 18px;
+			font-weight: bold;
+			margin-left: 9px;
+		}
+		.sucess-p{
+			height: 54px;
+			line-height: 54px;
+		}
+		.sucess-p i{
+			color :#c8000a;
+		}
+		.sucess-btn{
+			margin-top:54px;
+			height:30px;
+			width: 150px;
+			background:#c8000a;
+			border:0;
+			color:#fff;
+			border-radius:6px;
+		}
+	</style>
+	<script type="text/javascript" src="../js/jquery-1.11.3.js"></script>
+	<script type="text/javascript" src="../js/jquery.cookie.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			var name = GetQueryString('name');
+			if(name !== null){
+			$('#header-user-p').html('Hi ，').append('<i>' + name + '</i>');
+			$('#user-id').html(name);
+			$('#header-user-p').next().html('消息 0');
+			$('#header-user-p').next().next().html('退出');
+			$('.sucess-btn').click(function(){
+				location.href = 'index.html?name=' + name;		
+			})			
+		}
+		})
+		//获取get
+		function GetQueryString(name)
+		{
+		     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+		     var r = window.location.search.substr(1).match(reg);
+		     if(r!=null)return  unescape(r[2]); return null;
+		}
+	</script>
+</head>
+<body>
+	<link rel="shortcut icon" href="../img/gx_banner_nav_02.png">
+<div class="wrap-header">
+	<div class="header-small-top" id="header-small-top">
+		<a href="" class="small-top-home">盖象首页</a>
+		<p id="header-user-p" class="header-user-p">想你了，欢迎来到盖象！</p>
+		<a href="login.html">请登录</a><a href="">注册</a>
+		
+		<ul class="small-top-ul" id="top-ul">
+			<li>
+				<a href="">我的盖象</a>
+				<span class="top-ul-line"></span>
+				<div class="top-ul-user">
+					<a href="">我的订单</a>
+					<a href="">我的钱包</a>
+				</div>
+			</li>
+			<li>
+				<a href="">收藏夹</a>
+				<span class=""></span>
+				<div class="top-ul-user">
+					<a href="">收藏的商品</a>
+					<a href="">收藏的商铺</a>
+				</div>
+			</li>
+			<li>
+				<a href="">商家支持</a>
+				<span class=""></span>
+				<div class="top-ul-user">
+					<a href="">商家入驻</a>
+					<a href="">合作联盟</a>
+					<a href="">盖网终端机</a>
+				</div>
+			</li>
+			<li>
+				<a href="">手机APP</a>
+				<span class=""></span>
+				<i class="top-ul-phone"></i>
+				<div class="top-ul-user">
+					<a href=""><img src="../img/ewm.jpg"><p>盖象优选APP</p></a>
+					<a href=""><img src="../img/gzh.jpg"><p>微信公众号</p></a>
+				</div>
+			</li>
+			<li>
+				<a href="">简体中文</a>
+				<span class=""></span>
+				<div class="top-ul-user">
+					<a href="">简体中文</a>
+					<a href="">繁体中文</a>
+				</div>
+			</li>
+		</ul>
+		<div class="small-top-shop">购物车<span>0</span></div>
+	</div>
+</div>
+<header>
+		<h1 class="header-login"><img src="../img/logo.png"></h1>
+		<div class="header-sub">
+			<div class="header-sub-downmenu">商品</div>
+			<input type="text" name="" class="header-sub-text" placeholder="输入关键词进行搜索">
+			<button class="header-sub-btn"></button>
+		</div>
+</header>
+	<div class="gx-reigster-sucessbg">
+		<div class="sucess-win-xx">
+			<div class="sucess-h3">
+				<span></span>
+				<h3>注册成功！</h3>
+			</div>
+			<div class="sucess-p">
+				<p>您的盖网账号为<i id="user-id"></i> ,现在您可登录盖象商城，享受优质的购物体验</p>
+			</div>
+			<button class="sucess-btn">登录商城</button>
+		</div>
+	</div>
+	<div class="wrap_footer">
+	<div class="cut-off-rule"></div>
+	<footer>
+		<ul class="foot-frist-ul">
+			<li><span>多</span><i>更多<p>品质齐全</p></i></li>
+			<li><span>快</span><i>更快<p>极快配送</p></i></li>
+			<li><span>好</span><i>更好<p>汇聚品牌</p></i></li>
+			<li><span>省</span><i>更省<p>天天优惠</p></i></li>
+			<li><span>24</span><i>400-620-6899<p>24小时服务</p></i></li>
+		</ul>
+		<ul class="foot-two-ul">
+			<li>
+				<h3>新手指引</h3>
+				<a href="">商家入驻</a>
+				<a href="">合作加盟</a>
+				<a href="">盖网终端机</a>
+			</li>
+			<li>
+				<h3>购物指南</h3>
+				<a href="">购物流程</a>
+				<a href="">查询订单</a>
+				<a href="">付款方式</a>
+			</li>
+			<li>
+				<h3>积分说明</h3>
+				<a href="">盖网积分</a>
+				<a href="">如何获取积分</a>
+				<a href="">如何使用积分</a>
+			</li>
+			<li>
+				<h3>用户服务</h3>
+				<a href="">用户注册</a>
+				<a href="">修改密码</a>
+				<a href="">付款方式</a>
+			</li>
+			<li>
+				<h3>商城服务</h3>
+				<a href="">广告服务</a>
+				<a href="">退款退换货</a>
+			</li>
+		</ul>
+	</footer>
+	<div class="footer-wrap-copy">
+		<div class="copy-first-ul">
+			<ul>
+				<li><a href="">app下载</a>|</li>
+				<li><a href="">关于盖象</a>|</li>
+				<li><a href="">帮助中心</a>|</li>
+				<li><a href="">网站地址</a>|</li>
+				<li><a href="">诚聘英才</a>|</li>
+				<li><a href="">友情链接</a>|</li>
+				<li><a href="">联系客服</a>|</li>
+				<li><a href="">免责声明</a>|</li>
+				<li><a href="">隐私保护</a>|</li>
+				<li><a href="">站长统计</a></li>
+			</ul>
+			<p class="copy-main-p">Copyrightg-emall.com<i>广东盖网通传媒有限公司</i><i>增值电信业务经营许可证</i><i><a href="">互联网药品信息资格证</a></i><i><a href="">网络文化经营许可证</a></i><i><a href="">穗公网监备案证第44070050010060号</a></i><i><a href="">粤B2-20140361</a></i><i><a href="">粤ICP备14049968号-11</a></i></p>
+			<div class="good-faith-website">
+				<a href=""><img src="../img/bottom-link-01.jpg"></a>
+				<a href=""><img src="../img/bottom-link-02.jpg"></a>
+				<a href=""><img src="../img/bottom-link-03.jpg"></a>
+			</div>
+		</div>
+		<div class="webmaster-statistical"><a href="">站长统计</a></div>
+	</div>
+</div>
+</body>
+</html>
